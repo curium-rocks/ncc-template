@@ -1,0 +1,11 @@
+name: Verify
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+jobs:
+  node:
+    uses: curium-rocks/flows/.github/workflows/node-ts.yml@main
+    with: 
+      SONARQUBE_KEY: ${{ secrets.SONARQUBE_KEY }}
