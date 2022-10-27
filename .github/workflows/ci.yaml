@@ -6,6 +6,7 @@ on:
     branches: [ "main" ]
 jobs:
   node:
+    name: Node
     uses: curium-rocks/flows/.github/workflows/node-ts.yml@main
     secrets: 
       SONARQUBE_KEY: ${{ secrets.SONARQUBE_KEY }}
